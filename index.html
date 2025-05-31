@@ -389,7 +389,12 @@
     </footer>
 
     <!-- JavaScript Files -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuIc5Fb-mD0idPD23l0cltV9PhT6ngPAc&callback=initMap" async defer></script>
+   
+</script>
+     <script 
+  src={`https://maps.googleapis.com/maps/api/js?key=${import.meta.env.GOOGLE_MAPS_API}&callback=initMap`} 
+  async 
+  defer>
     <script src="js/maps.js"></script>
     <script src="js/main.js"></script>
 </body>
