@@ -3,31 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntelliSecure Solutions - Sécurité Intelligente par IA</title>
+    <title>Gardien Connecté - Solutions de Sécurité Intelligente par IA</title>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://unpkg.com">
-    <link rel="preconnect" href="https://maps.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-shield-alt"></i>
-                <span>IntelliSecure</span>
+                <span>Gardien Connecté</span>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home">Accueil</a></li>
-                    <li><a href="#solutions">Solutions</a></li>
-                    <li><a href="#features">Fonctionnalités</a></li>
-                    <li><a href="#pricing">Tarifs</a></li>
-                    <li><a href="#how-it-works">Fonctionnement</a></li>
-                    <li><a href="#surveillance">Surveillance</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#dashboard-section">Tableau de Bord</a></li>
+                    <li><a href="#clients-list-section">Clients</a></li>
+                    <li><a href="#alerts-manager-section">Alertes</a></li>
+                    <li><a href="#available-devices">Nos Appareils</a></li>
+                    <li><a href="#contact-admin">Contact Admin</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu">
@@ -36,366 +33,481 @@
         </div>
     </header>
 
-    <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav">
         <ul>
             <li><a href="#home">Accueil</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#features">Fonctionnalités</a></li>
-            <li><a href="#pricing">Tarifs</a></li>
-            <li><a href="#how-it-works">Fonctionnement</a></li>
-            <li><a href="#surveillance">Surveillance</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#dashboard-section">Tableau de Bord</a></li>
+            <li><a href="#clients-list-section">Clients</a></li>
+            <li><a href="#alerts-manager-section">Alertes</a></li>
+            <li><a href="#available-devices">Nos Appareils</a></li>
+            <li><a href="#contact-admin">Contact Admin</a></li>
         </ul>
     </div>
     <div class="overlay"></div>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <h1>Solutions de Sécurité Intelligente par IA</h1>
-            <p>Protection des personnes, téléphones et véhicules avec géolocalisation en temps réel et alertes intelligentes</p>
+            <p>Gardien Connecté est une solution innovante qui utilise des anneaux connectés et des dispositifs GPS pour véhicules afin d'assurer la sécurité des biens et des personnes. Notre système permet le suivi en temps réel des positions géographiques et détecte automatiquement les situations d'urgence pour envoyer des alertes instantanées aux administrateurs.</p>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Commencer</a>
-                <a href="#" class="btn btn-secondary">Voir la Démo</a>
+                <a href="#available-devices" class="btn btn-primary">Voir Nos Appareils</a>
+                <a href="#contact-admin" class="btn btn-secondary">Contactez-nous</a>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section class="solutions" id="solutions">
+    <section class="available-devices" id="available-devices">
         <div class="container">
             <div class="section-title">
-                <h2>Nos Solutions de Sécurité</h2>
-                <p>Protection complète pour ce qui compte le plus pour vous</p>
+                <h2>Nos Appareils Disponibles</h2>
+                <p>Découvrez notre gamme de dispositifs connectés pour une sécurité optimale.</p>
             </div>
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-img" style="background-image: url('images/personal-protection.jpg');"></div>
-                    <div class="solution-content">
-                        <h3>Protection Personnelle</h3>
-                        <p>Solutions anti-enlèvement avec suivi en temps réel et alertes d'urgence pour protéger vos proches.</p>
-                        <a href="#">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            <div class="device-gallery">
+                <div class="device-card">
+                    <div class="device-img" style="background-image: url('https://th.bing.com/th/id/OIP.7qWzvhzbPD2iRriWsruQCAHaGR?r=0&rs=1&pid=ImgDetMain');"></div>
+                    <div class="device-info">
+                        <h3>Anneau Connecté "KamerGuard"</h3>
+                        <p>Discret et puissant, l'anneau connecté offre un suivi personnel en temps réel et des alertes SOS.</p>
+                        <div class="device-price">15,000 FCFA</div>
+                        <a href="#" class="btn btn-primary btn-small">En savoir plus</a>
                     </div>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-img" style="background-image: url('images/device-security.jpg');"></div>
-                    <div class="solution-content">
-                        <h3>Sécurité des Appareils</h3>
-                        <p>Prévention du vol de téléphone avec alertes instantanées, verrouillage à distance et géolocalisation précise.</p>
-                        <a href="#">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                <div class="device-card">
+                    <div class="device-img" style="background-image: url('https://5.imimg.com/data5/WV/SI/MY-76097109/car-gps-tracking-device-1000x1000.jpg');"></div>
+                    <div class="device-info">
+                        <h3>Traceur GPS Véhicule "Routard Camerounais"</h3>
+                        <p>Gardez un œil sur votre véhicule avec notre traceur GPS avancé : anti-vol, détection de mouvement.</p>
+                        <div class="device-price">25,000 FCFA</div>
+                        <a href="#" class="btn btn-primary btn-small">En savoir plus</a>
                     </div>
                 </div>
-                <div class="solution-card">
-                    <div class="solution-img" style="background-image: url('images/vehicle-protection.jpg');"></div>
-                    <div class="solution-content">
-                        <h3>Protection des Véhicules</h3>
-                        <p>Système anti-vol avancé pour voitures et motos avec détection de mouvement et suivi en temps réel.</p>
-                        <a href="#">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                <div class="device-card">
+                    <div class="device-img" style="background-image: url('https://th.bing.com/th/id/OIP.yHO63Nfr9B1a6ikjuNwGWQHaHa?r=0&rs=1&pid=ImgDetMain');"></div>
+                    <div class="device-info">
+                        <h3>Montre de Sécurité "Petit Gardien"</h3>
+                        <p>Une montre élégante avec des fonctionnalités de sécurité intégrées pour les enfants ou les seniors.</p>
+                        <div class="device-price">20,000 FCFA</div>
+                        <a href="#" class="btn btn-primary btn-small">En savoir plus</a>
+                    </div>
+                </div>
+                <div class="device-card">
+                    <div class="device-img" style="background-image: url('https://img.freepik.com/premium-vector/emergency-alarm-icon-flat-style-alert-lamp-vector-illustration-isolated-background-police-urgency-sign-business-concept_157943-756.jpg');"></div>
+                    <div class="device-info">
+                        <h3>Alarme Personnelle "Alerte Express"</h3>
+                        <p>Un petit dispositif d'alarme portable pour des alertes instantanées en cas d'urgence.</p>
+                        <div class="device-price">8,000 FCFA</div>
+                        <a href="#" class="btn btn-primary btn-small">En savoir plus</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
+    <section class="dashboard" id="dashboard-section">
         <div class="container">
             <div class="section-title">
-                <h2>Fonctionnalités Clés</h2>
-                <p>Notre système offre des fonctionnalités de sécurité complètes alimentées par l'intelligence artificielle</p>
+                <h2>Tableau de Bord de Surveillance</h2>
+                <p>Aperçu en temps réel des statistiques clés de sécurité.</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Géolocalisation en Temps Réel</h3>
-                    <p>Suivez vos appareils, véhicules et proches avec une précision extrême en temps réel.</p>
+            <div class="dashboard-filters">
+                <label for="dashboard-date-filter">Date :</label>
+                <input type="date" id="dashboard-date-filter" value="2025-06-06">
+                <label for="dashboard-device-type-filter">Type d'appareil :</label>
+                <select id="dashboard-device-type-filter">
+                    <option value="all">Tous</option>
+                    <option value="ring">Anneau Connecté</option>
+                    <option value="gps">Traceur GPS Véhicule</option>
+                    <option value="watch">Montre de Sécurité</option>
+                    <option value="alarm">Alarme Personnelle</option>
+                </select>
+            </div>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="value" id="active-clients-count">125</div>
+                    <div class="label">Clients Actifs</div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Détection par IA</h3>
-                    <p>Nos algorithmes avancés détectent les mouvements suspects et les menaces potentielles.</p>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="value" id="alerts-number">12</div>
+                    <div class="label">Alertes Aujourd'hui</div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>Alertes Instantanées</h3>
-                    <p>Recevez des notifications immédiates lors de détection d'activité inhabituelle.</p>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-link"></i></div>
+                    <div class="value" id="connected-devices-count">340</div>
+                    <div class="label">Appareils Connectés</div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Analyse des Données</h3>
-                    <p>Apprentissage continu à partir des modèles pour améliorer la sécurité et la prévention.</p>
+                <div class="stat-card">
+                    <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="value" id="response-time">~5s</div>
+                    <div class="label">Temps de Réponse Moyen</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
+    <section class="clients-list-section" id="clients-list-section">
         <div class="container">
             <div class="section-title">
-                <h2>Comment ça Marche</h2>
-                <p>Étapes simples pour une sécurité renforcée et une tranquillité d'esprit</p>
+                <h2>Liste des Clients</h2>
+                <p>Gérez et visualisez les informations de vos clients.</p>
             </div>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Installer/Activer</h3>
-                    <p>Téléchargez notre application ou activez le dispositif matériel pour votre véhicule.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Configurer</h3>
-                    <p>Paramétrez vos préférences de sécurité et vos réglages de notification.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Surveiller</h3>
-                    <p>Notre système surveille en continu toute activité suspecte.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Recevoir des Alertes</h3>
-                    <p>Recevez des alertes instantanées lors de détection de menaces potentielles.</p>
-                </div>
+            <div class="clients-table-container">
+                <table class="clients-table">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Position Actuelle</th>
+                            <th>Statut</th>
+                            <th>Appareils</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jean-Pierre Ngomè</td>
+                            <td>4.0483, 9.7043 (Douala, Cameroun)</td>
+                            <td><span class="client-status status-active">Actif</span></td>
+                            <td>
+                                <ul class="client-devices-list">
+                                    <li><i class="fas fa-fingerprint"></i> Anneau (ID: R001)</li>
+                                    <li><i class="fas fa-car"></i> Traceur GPS (ID: V101)</li>
+                                </ul>
+                            </td>
+                            <td><button class="view-map-btn" data-lat="4.0483" data-lon="9.7043" data-client="Jean-Pierre Ngomè">Voir sur Carte</button></td>
+                        </tr>
+                        <tr>
+                            <td>Fatima Hassan</td>
+                            <td>10.5925, 14.3364 (Maroua, Cameroun)</td>
+                            <td><span class="client-status status-active">Actif</span></td>
+                            <td>
+                                <ul class="client-devices-list">
+                                    <li><i class="fas fa-fingerprint"></i> Anneau (ID: R002)</li>
+                                    <li><i class="fas fa-mobile-alt"></i> Téléphone (ID: P201)</li>
+                                </ul>
+                            </td>
+                            <td><button class="view-map-btn" data-lat="10.5925" data-lon="14.3364" data-client="Mme Fatima Hassan">Voir sur Carte</button></td>
+                        </tr>
+                        <tr>
+                            <td>Pierre Effa</td>
+                            <td>3.8480, 11.5021 (Yaoundé, Cameroun)</td>
+                            <td><span class="client-status status-inactive">Inactif</span></td>
+                            <td>
+                                <ul class="client-devices-list">
+                                    <li><i class="fas fa-motorcycle"></i> Moto GPS (ID: M301)</li>
+                                </ul>
+                            </td>
+                            <td><button class="view-map-btn" data-lat="3.8480" data-lon="11.5021" data-client="Pierre Effa">Voir sur Carte</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sophie Djoumessi</td>
+                            <td>5.4767, 10.4223 (Bafoussam, Cameroun)</td>
+                            <td><span class="client-status status-active">Actif</span></td>
+                            <td>
+                                <ul class="client-devices-list">
+                                    <li><i class="fas fa-watch"></i> Montre Sécurité (ID: W401)</li>
+                                </ul>
+                            </td>
+                            <td><button class="view-map-btn" data-lat="5.4767" data-lon="10.4223" data-client="Sophie Djoumessi">Voir sur Carte</button></td>
+                        </tr>
+                        <tr>
+                            <td>Antoine Kome</td>
+                            <td>4.2500, 9.2167 (Kribi, Cameroun)</td>
+                            <td><span class="client-status status-active">Actif</span></td>
+                            <td>
+                                <ul class="client-devices-list">
+                                    <li><i class="fas fa-car"></i> Traceur GPS (ID: V102)</li>
+                                </ul>
+                            </td>
+                            <td><button class="view-map-btn" data-lat="4.2500" data-lon="9.2167" data-client="Antoine Kome">Voir sur Carte</button></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
+    <section class="alerts-manager" id="alerts-manager-section">
         <div class="container">
             <div class="section-title">
-                <h2>Tarifs Simples et Transparents</h2>
-                <p>Choisissez le plan qui correspond à vos besoins de sécurité</p>
+                <h2>Gestionnaire d'Alertes</h2>
+                <p>Visualisez et gérez toutes les alertes du système.</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Plan Mensuel</h3>
-                    <div class="price">3,000 <span>FCFA/mois</span></div>
-                    <ul class="pricing-features">
-                        <li>Suivi en temps réel</li>
-                        <li>Alertes instantanées</li>
-                        <li>Détection IA de base</li>
-                        <li>Support par email</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Commencer</a>
-                </div>
-                <div class="pricing-card" style="border: 2px solid var(--secondary);">
-                    <h3>Plan Annuel</h3>
-                    <div class="price">30,000 <span>FCFA/an</span></div>
-                    <p style="color: var(--secondary); font-weight: bold; margin-bottom: 20px;">Économisez 17%</p>
-                    <ul class="pricing-features">
-                        <li>Toutes les fonctionnalités mensuelles</li>
-                        <li>Détection IA avancée</li>
-                        <li>Support prioritaire</li>
-                        <li>Options pour famille</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Commencer</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Entreprise</h3>
-                    <div class="price">Personnalisé</div>
-                    <ul class="pricing-features">
-                        <li>Toutes les fonctionnalités annuelles</li>
-                        <li>Support multi-appareils</li>
-                        <li>Gestionnaire de compte dédié</li>
-                        <li>Accès API</li>
-                        <li>Solutions personnalisées</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary">Nous Contacter</a>
-                </div>
+            <div class="alerts-filter">
+                <label for="alerts-date-filter">Alertes pour la date :</label>
+                <input type="date" id="alerts-date-filter" value="2025-06-06">
+                <p>Nombre d'alertes sélectionnées: <strong id="selected-alerts-count">5</strong></p>
+            </div>
+            <div class="alerts-table-container">
+                <table class="alerts-table">
+                    <thead>
+                        <tr>
+                            <th>ID Alerte</th>
+                            <th>Client</th>
+                            <th>Appareil</th>
+                            <th>Type d'Alerte</th>
+                            <th>Heure</th>
+                            <th>Statut</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#001</td>
+                            <td>Jean-Pierre Ngomè</td>
+                            <td>Anneau (R001)</td>
+                            <td>Déplacement suspect</td>
+                            <td>08:30</td>
+                            <td><span class="alert-status status-new">Nouveau</span></td>
+                            <td class="alert-actions">
+                                <button class="btn-small btn-resolve">Résolu</button>
+                                <button class="btn-small btn-view" data-lat="4.0483" data-lon="9.7043" data-client="Jean-Pierre Ngomè (Alerte)">Voir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#002</td>
+                            <td>Fatima Hassan</td>
+                            <td>Téléphone (P201)</td>
+                            <td>Géorepérage violé</td>
+                            <td>09:15</td>
+                            <td><span class="alert-status status-in-progress">En Cours</span></td>
+                            <td class="alert-actions">
+                                <button class="btn-small btn-resolve">Résolu</button>
+                                <button class="btn-small btn-view" data-lat="10.5925" data-lon="14.3364" data-client="Mme Fatima Hassan (Alerte)">Voir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#003</td>
+                            <td>Antoine Kome</td>
+                            <td>Traceur GPS (V102)</td>
+                            <td>Mouvement non autorisé</td>
+                            <td>10:00</td>
+                            <td><span class="alert-status status-resolved">Résolu</span></td>
+                            <td class="alert-actions">
+                                <button class="btn-small btn-view" data-lat="4.2500" data-lon="9.2167" data-client="Antoine Kome (Alerte)">Voir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#004</td>
+                            <td>Sophie Djoumessi</td>
+                            <td>Montre Sécurité (W401)</td>
+                            <td>Batterie faible</td>
+                            <td>11:45</td>
+                            <td><span class="alert-status status-new">Nouveau</span></td>
+                            <td class="alert-actions">
+                                <button class="btn-small btn-resolve">Résolu</button>
+                                <button class="btn-small btn-view" data-lat="5.4767" data-lon="10.4223" data-client="Sophie Djoumessi (Alerte)">Voir</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#005</td>
+                            <td>Pierre Effa</td>
+                            <td>Moto GPS (M301)</td>
+                            <td>Zone interdite</td>
+                            <td>13:00</td>
+                            <td><span class="alert-status status-in-progress">En Cours</span></td>
+                            <td class="alert-actions">
+                                <button class="btn-small btn-resolve">Résolu</button>
+                                <button class="btn-small btn-view" data-lat="3.8480" data-lon="11.5021" data-client="Pierre Effa (Alerte)">Voir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- Surveillance Section -->
-    <section class="surveillance" id="surveillance">
+    <section class="contact-admin" id="contact-admin">
         <div class="container">
             <div class="section-title">
-                <h2>Surveillance Clients</h2>
-                <p>Surveillez vos appareils connectés et systèmes de sécurité en temps réel</p>
+                <h2>Contactez l'Administrateur</h2>
+                <p>Pour toute question ou assistance technique, n'hésitez pas à nous contacter.</p>
             </div>
-            
-            <h3 style="margin-top: 20px; color: var(--primary);">Clients Actifs</h3>
-            <div class="client-list">
-                <div class="client-card" id="client1">
-                    <h3>Ousmane Ali</h3>
-                    <p class="client-phone"><i class="fas fa-phone"></i> +237 677 123 456</p>
-                    <span class="client-status status-active">Actif</span>
-                    <div class="device-list">
-                        <div class="device-item">
-                            <i class="fas fa-car"></i> Traqueur Véhicule (Toyota RAV4)
-                        </div>
-                        <div class="device-item">
-                            <i class="fas fa-mobile-alt"></i> Suivi Téléphone
-                        </div>
-                    </div>
-                    <button class="btn btn-primary view-location-btn" 
-                        data-lat="4.0511" 
-                        data-lng="9.7679" 
-                        data-name="Ousmane Ali" 
-                        data-phone="+237 677 123 456" 
-                        data-status="Actif" 
-                        data-devices="Traqueur Véhicule (Toyota RAV4), Suivi Téléphone">
-                        Voir Localisation
-                    </button>
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>admin@gardienconnecte.com</p>
                 </div>
-                
-                <div class="client-card" id="client2">
-                    <h3>Mohamadou Mouass</h3>
-                    <p class="client-phone"><i class="fas fa-phone"></i> +237 699 234 567</p>
-                    <span class="client-status status-active">Actif</span>
-                    <div class="device-list">
-                        <div class="device-item">
-                            <i class="fas fa-ring"></i> Bague Intelligente (Alerte Urgence)
-                        </div>
-                        <div class="device-item">
-                            <i class="fas fa-mobile-alt"></i> Suivi Téléphone
-                        </div>
-                    </div>
-                    <button class="btn btn-primary view-location-btn" 
-                        data-lat="4.0486" 
-                        data-lng="9.6987" 
-                        data-name="Mohamadou Mouass" 
-                        data-phone="+237 699 234 567" 
-                        data-status="Actif" 
-                        data-devices="Bague Intelligente (Alerte Urgence), Suivi Téléphone">
-                        Voir Localisation
-                    </button>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Téléphone</h3>
+                    <p>+237 6XX XXX XXX</p>
                 </div>
-                
-                <div class="client-card" id="client3">
-                    <h3>Ayoub Nasser</h3>
-                    <p class="client-phone"><i class="fas fa-phone"></i> +237 677 345 678</p>
-                    <span class="client-status status-active">Actif</span>
-                    <div class="device-list">
-                        <div class="device-item">
-                            <i class="fas fa-car"></i> Traqueur Véhicule (Range Rover)
-                        </div>
-                        <div class="device-item">
-                            <i class="fas fa-mobile-alt"></i> Suivi Téléphone
-                        </div>
-                        <div class="device-item">
-                            <i class="fas fa-watch"></i> Montre Intelligente (Alerte Urgence)
-                        </div>
-                    </div>
-                    <button class="btn btn-primary view-location-btn" 
-                        data-lat="3.8480" 
-                        data-lng="11.5021" 
-                        data-name="Ayoub Nasser" 
-                        data-phone="+237 677 345 678" 
-                        data-status="Actif" 
-                        data-devices="Traqueur Véhicule (Range Rover), Suivi Téléphone, Montre Intelligente (Alerte Urgence)">
-                        Voir Localisation
-                    </button>
-                </div>
-                
-                <div class="client-card">
-                    <h3>Fatima Abba</h3>
-                    <p><i class="fas fa-phone"></i> +237 699 456 789</p>
-                    <span class="client-status status-inactive">Inactif (Paiement dû)</span>
-                    <div class="device-list">
-                        <div class="device-item">
-                            <i class="fas fa-mobile-alt"></i> Suivi Téléphone
-                        </div>
-                    </div>
-                    <button class="btn btn-secondary" style="width: 100%; margin-top: 15px; padding: 8px;" disabled>
-                        Service Suspendu
-                    </button>
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adresse</h3>
+                    <p>Quartier Pitoaré, Maroua, Cameroun</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Modal -->
-    <div class="modal" id="mapModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modalClientName"></h2>
-            <div class="client-info">
-                <p><i class="fas fa-phone"></i> <span id="modalClientPhone"></span></p>
-                <p><strong>Statut:</strong> <span id="modalClientStatus"></span></p>
-                <h4>Appareils:</h4>
-                <ul id="modalClientDevices"></ul>
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Gardien Connecté</h3>
+                <p>Votre partenaire de confiance pour la sécurité intelligente par IA.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div id="surveillanceMap" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+            <div class="footer-col">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#dashboard-section">Tableau de Bord</a></li>
+                    <li><a href="#clients-list-section">Clients</a></li>
+                    <li><a href="#alerts-manager-section">Alertes</a></li>
+                    <li><a href="#available-devices">Nos Appareils</a></li>
+                    <li><a href="#contact-admin">Contact Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Nos Solutions</h3>
+                <ul>
+                    <li><a href="#">Protection Personnelle</a></li>
+                    <li><a href="#">Sécurité des Appareils</a></li>
+                    <li><a href="#">Protection des Véhicules</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Conditions Générales</a></li>
+                    <li><a href="#">Politique de Confidentialité</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Prêt à sécuriser ce qui compte le plus ?</h2>
-            <p>Rejoignez des milliers de clients satisfaits qui font confiance à IntelliSecure Solutions pour leurs besoins de sécurité.</p>
-            <a href="#" class="btn btn-primary">Essai Gratuit</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>IntelliSecure</h3>
-                    <p>Solutions de sécurité avancées alimentées par l'IA pour les personnes, appareils et véhicules.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Solutions</h3>
-                    <ul>
-                        <li><a href="#">Protection Personnelle</a></li>
-                        <li><a href="#">Sécurité des Appareils</a></li>
-                        <li><a href="#">Protection des Véhicules</a></li>
-                        <li><a href="#">Solutions Entreprises</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Entreprise</h3>
-                    <ul>
-                        <li><a href="#">À Propos</a></li>
-                        <li><a href="#">Notre Équipe</a></li>
-                        <li><a href="#">Carrières</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Support</h3>
-                    <ul>
-                        <li><a href="#">Centre d'Aide</a></li>
-                        <li><a href="#">Nous Contacter</a></li>
-                        <li><a href="#">Politique de Confidentialité</a></li>
-                        <li><a href="#">Conditions d'Utilisation</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 IntelliSecure Solutions. Tous droits réservés.</p>
-            </div>
+        <div class="copyright">
+            <p>&copy; <span id="current-year"></span> Gardien Connecté. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- JavaScript Files -->
-   
-</script>
-     <script 
-  src={`https://maps.googleapis.com/maps/api/js?key=${import.meta.env.GOOGLE_MAPS_API}&callback=initMap`} 
-  async 
-  defer>
-    <script src="js/maps.js"></script>
-    <script src="js/main.js"></script>
+    <div id="mapModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="mapModalTitle">Localisation du Client</h2>
+            <div id="mapModalMap"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.overlay');
+            const navLinks = document.querySelectorAll('.mobile-nav ul li a');
+
+            mobileMenu.addEventListener('click', () => {
+                mobileNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                mobileMenu.classList.toggle('active'); // Animate the hamburger icon
+            });
+
+            overlay.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Modal Map Functionality
+            const mapModal = document.getElementById('mapModal');
+            const closeModal = document.querySelector('.close-modal');
+            const mapModalTitle = document.getElementById('mapModalTitle');
+            const viewMapButtons = document.querySelectorAll('.view-map-btn, .btn-view');
+
+            let currentMap = null; // To store the Leaflet map instance
+
+            function openMapModal(lat, lon, clientName) {
+                mapModal.classList.add('active');
+                mapModalTitle.textContent = `Localisation de ${clientName}`;
+
+                // Initialize map if it doesn't exist or re-center if it does
+                if (currentMap) {
+                    currentMap.setView([lat, lon], 13);
+                } else {
+                    currentMap = L.map('mapModalMap').setView([lat, lon], 13);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(currentMap);
+                }
+
+                // Clear previous markers and add a new one
+                currentMap.eachLayer(function (layer) {
+                    if (layer instanceof L.Marker) {
+                        currentMap.removeLayer(layer);
+                    }
+                });
+
+                L.marker([lat, lon]).addTo(currentMap)
+                    .bindPopup(`<b>${clientName}</b><br>Position actuelle.`)
+                    .openPopup();
+
+                // Invalidate size after modal is displayed to ensure map renders correctly
+                setTimeout(() => {
+                    currentMap.invalidateSize();
+                }, 100);
+            }
+
+            closeModal.addEventListener('click', () => {
+                mapModal.classList.remove('active');
+            });
+
+            window.addEventListener('click', (event) => {
+                if (event.target == mapModal) {
+                    mapModal.classList.remove('active');
+                }
+            });
+
+            viewMapButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const lat = parseFloat(this.dataset.lat);
+                    const lon = parseFloat(this.dataset.lon);
+                    const clientName = this.dataset.client;
+                    openMapModal(lat, lon, clientName);
+                });
+            });
+
+            // Alerts Manager: Update alert count on date change (dummy)
+            const alertsDateFilter = document.getElementById('alerts-date-filter');
+            const selectedAlertsCount = document.getElementById('selected-alerts-count');
+
+            alertsDateFilter.addEventListener('change', () => {
+                // In a real application, you would fetch data based on the selected date
+                // For this example, we'll just show a random number
+                selectedAlertsCount.textContent = Math.floor(Math.random() * 10) + 5; // Random number between 5 and 14
+            });
+
+            // Dummy functionality for "Résolu" button in Alerts Manager
+            document.querySelectorAll('.btn-resolve').forEach(button => {
+                button.addEventListener('click', function() {
+                    const statusSpan = this.closest('tr').querySelector('.alert-status');
+                    statusSpan.textContent = 'Résolu';
+                    statusSpan.classList.remove('status-new', 'status-in-progress');
+                    statusSpan.classList.add('status-resolved');
+                    this.style.display = 'none'; // Hide the resolve button
+                    alert('Alerte marquée comme résolue!'); // Simple alert for demonstration
+                });
+            });
+        });
+    </script>
 </body>
 </html>
